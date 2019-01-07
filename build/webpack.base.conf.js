@@ -1,14 +1,14 @@
 var path = require('path')
-var fs = require('fs')
+// var fs = require('fs')
 var utils = require('./utils')
 var config = require('../config')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
 var vueLoaderConfig = require('./vue-loader.conf')
 var MpvuePlugin = require('webpack-mpvue-asset-plugin')
-var glob = require('glob')
+// var glob = require('glob')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
-var relative = require('relative')
+// var relative = require('relative')
 var MpvueEntry = require('mpvue-entry')
 
 function resolve (dir) {

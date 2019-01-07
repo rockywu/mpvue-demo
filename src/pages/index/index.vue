@@ -18,7 +18,8 @@
       <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+    <a href="/pages/counter/index" class="counter">去往Vuex示例页面</a>
+    <a href="/pages/logs/index" class="counter">去logs页面</a>
   </div>
 </template>
 
@@ -29,7 +30,10 @@ export default {
   data () {
     return {
       motto: 'Hello World',
-      userInfo: {}
+      userInfo: {
+        avatarUrl: 'https://image.mgzf.com/mogoroom/mogoka/9/531302/a8b6602ceebe/1544522739331.jpg',
+        nickName: 'myname'
+      }
     }
   },
 
@@ -39,7 +43,7 @@ export default {
 
   methods: {
     bindViewTap () {
-      const url = '../logs/main'
+      const url = '../logs/index'
       wx.navigateTo({ url })
     },
     getUserInfo () {

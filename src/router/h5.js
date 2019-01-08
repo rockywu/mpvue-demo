@@ -3,24 +3,16 @@
  */
 import Vue from 'vue'
 import Router from 'vue-router'
+import config from './config'
 Vue.use(Router)
+
+let routes = (config || []).map(v => {
+  v.component = () => System.import(`../${v.entry}.vue`)
+  v.path = v.uri
+  return v
+})
 
 export default new Router({
   mode: 'history',
-  routes: [{
-    path: '/',
-    name: 'index',
-    component: () => System.import('../pages/index/index.vue'),
-    alias: '/pages/index/index'
-  }, {
-    path: '/logs',
-    name: 'logs',
-    component: () => System.import('../pages/logs/index.vue'),
-    alias: '/pages/logs/index'
-  }, {
-    path: '/counter',
-    name: 'counter',
-    component: () => System.import('../pages/counter/index.vue'),
-    alias: '/pages/counter/index'
-  }]
+  routes: routes
 })

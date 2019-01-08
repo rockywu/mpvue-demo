@@ -32,6 +32,9 @@ module.exports = {
     wx: true,
     getApp: true,
     getPage: true,
-    requirePlugin: true
+    requirePlugin: true,
+    sessionStorage: true,
+    System: true,
+    window: true
   }
 }

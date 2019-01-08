@@ -1,13 +1,8 @@
 {
-  "pages": [
-    "pages/index/main",
-    "pages/logs/main",
-    "pages/counter/main"
-  ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#fefefe",
+    "navigationBarTitleText": "测试微信",
     "navigationBarTextStyle": "black"
   }
 }

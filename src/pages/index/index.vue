@@ -1,74 +1,39 @@
 <template>
-  <div class="container" @click="clickHandle('test click', $event)">
-
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
-      </div>
-    </div>
-
+  <div class="container">
+    <!-- 图片引用的两种方式 -->
+    <img class="girl" src="https://image.mgzf.com/mogoroom/mogoka/9/531302/a8b6602ceebe/1544522739331.jpg" alt="">
+    <card :text="motto"></card>
     <form class="form-container">
       <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
-    <a href="/pages/counter/index" class="counter">去往Vuex示例页面</a>
-    <a href="/pages/logs/index" class="counter">去logs页面</a>
+    <!-- 路由跳转 -->
+    <a @click="gotoGame('pages/counter/index')" class="counter">去往Vuex示例页面</a>
+    <a @click="gotoGame('pages/logs/index')" class="counter">去往logs页面</a>
   </div>
 </template>
 
 <script>
-import card from '@/components/card'
+  // 组件引用
+  import card from '@/components/card'
 
-export default {
-  data () {
-    return {
-      motto: 'Hello World',
-      userInfo: {
-        avatarUrl: 'https://image.mgzf.com/mogoroom/mogoka/9/531302/a8b6602ceebe/1544522739331.jpg',
-        nickName: 'myname'
+  export default {
+    data () {
+      return {
+        motto: 'Hello World'
+      }
+    },
+    components: {
+      card
+    },
+    methods: {
+      gotoGame (path) {
+        this.navigatePageTo(this.router + path)
       }
     }
-  },
-
-  components: {
-    card
-  },
-
-  methods: {
-    bindViewTap () {
-      const url = '../logs/index'
-      wx.navigateTo({ url })
-    },
-    getUserInfo () {
-      // 调用登录接口
-      wx.login({
-        success: () => {
-          wx.getUserInfo({
-            success: (res) => {
-              this.userInfo = res.userInfo
-            }
-          })
-        }
-      })
-    },
-    clickHandle (msg, ev) {
-      console.log('clickHandle:', msg, ev)
-    }
-  },
-
-  created () {
-    // 调用应用实例的方法获取全局数据
-    this.getUserInfo()
   }
-}
 </script>
+
 
 <style scoped>
 .userinfo {

@@ -12,9 +12,12 @@
     "dev:swan": "node -r esm build/dev-server.js swan",
     "start:swan": "npm run dev:swan",
     "build:swan": "node -r esm build/build.js swan",
+    "dev:h5": "webpack-dev-server --inline --progress --config buildH5/webpack.devH5.conf.js",
+    "build:h5": "node buildH5/build.js",
     "dev": "node -r esm build/dev-server.js wx",
     "start": "npm run dev",
     "build": "node -r esm build/build.js wx",
+    "all": "npm run dev && npm run devH5",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
@@ -58,6 +61,7 @@
     "mpvue-loader": "^1.1.2",
     "mpvue-template-compiler": "^1.0.11",
     "mpvue-webpack-target": "^1.0.3",
+    "node-notifier": "^5.3.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^2.0.0",
     "portfinder": "^1.0.13",
@@ -72,9 +76,12 @@
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",
     "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.21",
     "webpack": "^3.11.0",
     "webpack-bundle-analyzer": "^2.2.1",
+    "webpack-cli": "^3.2.1",
     "webpack-dev-middleware-hard-disk": "^1.12.0",
+    "webpack-dev-server": "^3.0.0",
     "webpack-merge": "^4.1.0",
     "webpack-mpvue-asset-plugin": "^0.1.2",
     "webpack-mpvue-vendor-plugin": "^0.0.1"

@@ -8,7 +8,7 @@ var path = require('path')
 var chalk = require('chalk')
 var webpack = require('webpack')
 var config = require('../configH5')
-var webpackConfig = require('./webpack.prodH5.conf')
+var webpackConfig = require('./webpack.prod.conf')
 
 var spinner = ora('building for production...')
 spinner.start()

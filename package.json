@@ -12,12 +12,11 @@
     "dev:swan": "node -r esm build/dev-server.js swan",
     "start:swan": "npm run dev:swan",
     "build:swan": "node -r esm build/build.js swan",
-    "dev:h5": "webpack-dev-server --inline --progress --config buildH5/webpack.devH5.conf.js",
+    "dev:h5": "webpack-dev-server --inline --progress --config buildH5/webpack.dev.conf.js",
     "build:h5": "node buildH5/build.js",
-    "dev": "node -r esm build/dev-server.js wx",
+    "dev": "npm run dev:wx",
     "start": "npm run dev",
-    "build": "node -r esm build/build.js wx",
-    "all": "npm run dev && npm run devH5",
+    "build": "npm run build:wx && npm run build:h5",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {

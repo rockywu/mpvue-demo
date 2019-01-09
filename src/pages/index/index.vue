@@ -7,6 +7,7 @@
       <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
+    <span>我的历史</span>
     <!-- 路由跳转 -->
     <a @click="gotoGame('pages/counter/index')" class="counter">去往Vuex示例页面</a>
     <a @click="gotoGame('pages/logs/index')" class="counter">去往logs页面</a>

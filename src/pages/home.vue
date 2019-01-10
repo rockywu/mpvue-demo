@@ -1,6 +1,7 @@
 <template>
-  <div>
-    1231231
+  <div class="aa">
+    <p class="p">blue</p>
+    <span class="c">red</span>
   </div>
 </template>
 
@@ -13,6 +14,13 @@
   }
 </script>
 
-<style>
-
+<style lang="scss">
+.aa {
+  & .c {
+    color: red;
+  }
+  & .p {
+    color: blue;
+  }
+}
 </style>

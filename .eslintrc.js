@@ -381,7 +381,7 @@ module.exports = {
      * enforce unified spacing in mustache interpolations
      * https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/mustache-interpolation-spacing.md
      */
-    'vue/mustache-interpolation-spacing': 'warn',
+    'vue/mustache-interpolation-spacing': 'off',
 
     /**
      * vue组件name属性命名方式

@@ -2,10 +2,6 @@
 
 仓库安装和初始化
 
-`npm run init`
-
-请不要使用npm install、cnpm install、yarn install都可能存在无法运行的情况
-
-
+注意：一定要使用`npm install`， 否则会出错
 
 ### h5 对于标签小程序转换

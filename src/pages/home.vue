@@ -20,7 +20,7 @@
     color: red;
   }
   & .p {
-    color: blue;
+    color: #6bff5f;
   }
 }
 </style>

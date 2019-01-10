@@ -5,8 +5,10 @@ import Vuex from 'vuex'
 import App from './AppH5'
 import router from './router/h5'
 import store from './store'
+import api from './common/api'
 
 Vue.config.productionTip = false
+Vue.prototype.$api = api
 Vue.use(Vuex)
 Vue.mixin({
   data () {
@@ -34,6 +36,9 @@ Vue.mixin({
     }
   },
   created () {
+    this.$api.fetch('base.ccc').then(v => {
+      console.log(v)
+    })
     console.log('chrome')
   }
 })

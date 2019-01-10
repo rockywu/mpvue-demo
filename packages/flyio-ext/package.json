@@ -9,7 +9,7 @@
   "author": "rockywu 吴佳雷 <wujialei@mgzf.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "lib/flyio-ext.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

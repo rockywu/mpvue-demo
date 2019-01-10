@@ -23,31 +23,44 @@
  * 3、name  //页面名称 页面跳转将使用name进行跳转匹配
  * 4、config //小程序页面配置
  */
-module.exports = [{
-  uri: '/',
-  name: 'index',
-  entry: 'pages/index/index',
-  config: { // 页面配置，即 page.json 的内容，可选
-    navigationBarTitleText: 'index',
-    enablePullDownRefresh: true
+module.exports = [
+  {
+    uri: '/',
+    name: 'home',
+    entry: 'pages/home',
+    config: { // 页面配置，即 page.json 的内容，可选
+      navigationBarTitleText: '蘑菇租房',
+      enablePullDownRefresh: true
+    }
   },
-  alias: '/pages/index/index'
-}, {
-  uri: '/logs',
-  name: 'logs',
-  entry: 'pages/logs/index',
-  config: { // 页面配置，即 page.json 的内容，可选
-    navigationBarTitleText: '文章列表',
-    enablePullDownRefresh: true
+  {
+    uri: '/',
+    name: 'index',
+    entry: 'pages/index/index',
+    config: { // 页面配置，即 page.json 的内容，可选
+      navigationBarTitleText: 'index',
+      enablePullDownRefresh: true
+    },
+    alias: '/pages/index/index'
   },
-  alias: '/pages/logs/index'
-}, {
-  uri: '/counter',
-  name: 'counter',
-  entry: 'pages/counter/index',
-  config: { // 页面配置，即 page.json 的内容，可选
-    navigationBarTitleText: '查看启动日志',
-    enablePullDownRefresh: true
+  {
+    uri: '/logs',
+    name: 'logs',
+    entry: 'pages/logs/index',
+    config: { // 页面配置，即 page.json 的内容，可选
+      navigationBarTitleText: '文章列表',
+      enablePullDownRefresh: true
+    },
+    alias: '/pages/logs/index'
   },
-  alias: '/pages/counter/index'
-}]
+  {
+    uri: '/counter',
+    name: 'counter',
+    entry: 'pages/counter/index',
+    config: { // 页面配置，即 page.json 的内容，可选
+      navigationBarTitleText: '查看启动日志',
+      enablePullDownRefresh: true
+    },
+    alias: '/pages/counter/index'
+  }
+]

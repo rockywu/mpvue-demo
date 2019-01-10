@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import App from './App'
 import store from './store'
+import api from './common/api'
 
 Vue.config.productionTip = false
 App.mpType = 'app'
 Vue.prototype.$store = store
+Vue.prototype.$api = api
 
 Vue.mixin({
   data () {
@@ -32,7 +34,10 @@ Vue.mixin({
     }
   },
   created () {
-    // console.log('wx')
+    this.$api.fetch('base.ccc').then(v => {
+      console.log(v)
+    })
+    console.log('wx')
   }
 })
 

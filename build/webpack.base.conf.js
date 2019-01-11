@@ -148,5 +148,16 @@ if (process.env.PLATFORM === 'swan') {
   })
 }
 
+if (process.env.PLATFORM === 'wx') {
+  let assets = new CopyWebpackPlugin([
+    {
+      from: path.resolve(__dirname, '../src/assets'),
+      to: path.resolve(config.build.assetsRoot, './assets'),
+      ignore: ['.*']
+    }
+  ])
+  baseWebpackConfig.plugins.push(assets)
+}
+
 module.exports = baseWebpackConfig
 

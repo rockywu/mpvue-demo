@@ -121,8 +121,8 @@ class FlyIOExt {
     });
     //执行接口调用
     return fly.request(childOpt.url, body,  Object.assign({}, childOpt, config, {
-      // headers: {...childOpt.headers || {}, ...config.headers || {}},
-      // params : {...childOpt.params || {}, ...config.params || {}}
+      headers: Object.assign({}, childOpt.headers|| {}, config.headers || {}),
+      params : Object.assign({}, childOpt.params || {}, config.params || {})
     }))
   }
 }

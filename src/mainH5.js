@@ -36,7 +36,7 @@ Vue.mixin({
     }
   },
   created () {
-    this.$api.fetch('base.ccc').then(v => {
+    this.$api.fetch('base.ccc', {a:1, b:2}, {params: {c: 1,d: 2}}).then(v => {
       console.log(v)
     })
     console.log('chrome')

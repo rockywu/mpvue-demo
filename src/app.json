@@ -32,7 +32,7 @@
         "iconPath": "./assets/images/common/my_normal.png",
         "selectedIconPath": "./assets/images/common/my_active.png",
         "text": "我",
-        "pagePath": "pages/home"
+        "pagePath": "pages/self/index"
       }
     ]
   },

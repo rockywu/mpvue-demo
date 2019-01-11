@@ -34,33 +34,21 @@ module.exports = [
     }
   },
   {
-    uri: '/',
-    name: 'index',
-    entry: 'pages/index/index',
+    uri: '/self/index',
+    name: 'home',
+    entry: 'pages/self/index',
     config: { // 页面配置，即 page.json 的内容，可选
-      navigationBarTitleText: 'index',
+      navigationBarTitleText: '蘑菇租房',
       enablePullDownRefresh: true
-    },
-    alias: '/pages/index/index'
+    }
   },
   {
-    uri: '/logs',
-    name: 'logs',
-    entry: 'pages/logs/index',
+    uri: '/self/setting',
+    name: 'home',
+    entry: 'pages/self/setting',
     config: { // 页面配置，即 page.json 的内容，可选
-      navigationBarTitleText: '文章列表',
+      navigationBarTitleText: '蘑菇租房',
       enablePullDownRefresh: true
-    },
-    alias: '/pages/logs/index'
-  },
-  {
-    uri: '/counter',
-    name: 'counter',
-    entry: 'pages/counter/index',
-    config: { // 页面配置，即 page.json 的内容，可选
-      navigationBarTitleText: '查看启动日志',
-      enablePullDownRefresh: true
-    },
-    alias: '/pages/counter/index'
+    }
   }
 ]
